@@ -1,0 +1,1140 @@
+@charset 'utf-8';
+
+   @font-face {
+    font-family:  'NanumBarunGothic';
+    src: url(../fonts/NanumBarunGothic.ttf);
+
+   }
+   
+   .nanumbarungothic 
+   * {
+    font-family: 'NanumBarunGothic', sans-serif;
+   }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+input{
+    outline: none;
+}
+ul,li{
+    list-style: none;
+}
+.clear::after{
+content: '';
+display: block;
+clear: both;
+}
+a{
+    text-decoration: none;
+    color: #333;
+}
+body {
+	min-width:320px;
+	margin:0 auto;
+	overflow-x: hidden;
+	color: #515151;
+    /* background-color: #1746cd; */
+}
+/* 헤더영역 */
+.header{
+    position: relative;
+    z-index: 100;
+}
+/* 메인로고부분 */
+.header .main-logo{
+    position: absolute;
+    top: 60px;
+    left: 44%;
+}
+/* 메인메뉴바부분 */
+.header .nav{
+    position: absolute;
+    top: 137px;
+    left: 35%;
+}
+.header .nav .main-menu{
+ height: 80px;
+ padding-top: 16px;
+}
+.header .nav .main-menu > li{
+    float: left;
+    /* text-align: center; */
+    /* padding-right: 0 15px; */
+    height: 43px;
+    /* text-size-adjust: 100%; */
+    /* padding: 0 15px; */
+    position: relative;  
+}
+.header .nav .main-menu > li > a{
+    display: inline-block;
+    padding: 0 15px;
+    font-style: normal;
+    font-family: 'NanumBarunGothic';
+    font-weight: 500;
+    /* height: 43px; */
+    line-height: 43px;
+    letter-spacing: 1px;
+    font-size: 20px;
+    color: #fff;
+    /* text-size-adjust: 100%; */
+    /* text-transform: none; */
+    /* text-align: left; */
+    text-align: left;
+}
+.header .nav .main-menu > li > a:hover{
+    background-color: rgba(255, 255, 255, 0.75);
+     /* color: rgb(23, 70, 203); */
+     color: #1746cd;
+     font-style: normal;
+     font-family: 'NanumBarunGothic';
+     font-weight: 400;
+}
+.header .nav .main-menu >li:hover .sub-menu > li {
+    display: block;
+}
+.sub-menu{
+    width: 225px;
+    background-color: #3d2520;
+    border-color: #c59d5f #3f3f3f #3f3f3f;
+    box-shadow: 0 13px 42px 11px rgb(0 0 0 / 5%);
+    position: absolute;
+    top: 45px;
+    left: 0;
+    /* margin: 0; */
+    z-index:199;
+    /* border-top: 2px solid #c59d5f; */
+}
+.header .nav .main-menu > li:hover .sub-menu-4,
+.header .nav .main-menu > li:hover .sub-menu-5
+{   position: absolute;
+    top: 45px;
+    left: -119px;
+}
+.sub-menu >  li{
+    display: none;
+    text-align: left;
+    padding: 0 15px; 
+}
+.sub-menu li:first-child{
+    border-top: 2px solid #c59d5f;
+}
+.sub-menu > li a{
+    color: rgb(178, 178, 178);
+    height: 43px;
+    font-size: 15px;
+    font-family: 'NanumBarunGothic';
+    line-height: 42px;
+    font-weight: 600;
+    transition: .3s;
+}
+.sub-menu > li a:hover {
+    padding: 5px;
+}
+
+/* <!-- 메인타이틀영역 --> */
+
+.main-bg{
+    width: 100%;
+    height: 100%;
+   
+    
+}
+.main-txt{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 100;
+}
+.main-txt .inner{
+    position: absolute;
+    top: 365px;
+    left: 28%;
+    text-align: center ;
+    z-index: 100;
+    
+}
+.main-txt .inner img{
+ 
+}
+.main-txt .inner h1{
+    font-size: 50px;
+    font-family: 'NanumBarunGothic';
+    list-style: 50px;
+    font-weight: 600;
+    color: #fff;
+    margin: 20px 0 10px 0; 
+}
+.main-txt .inner p{
+    font-family: 'NanumBarunGothic';
+    font-size: 15px;
+    color: #fff;
+    line-height: 28px;
+    margin: 0 0 10px;
+}
+
+/* 메인배너영역 */
+.main-banner{
+width: 100%;
+height: 100%;
+
+
+}
+
+.main-banner .slider{
+    width: 100%;
+    height: 100%;
+
+}
+.main-banner .slider div{
+    height: 100vh;
+}
+.main-banner .slider img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    /* display: block; */
+}
+
+.main-banner .slider{}
+
+
+/* <!-- 스티키메뉴바부분 --> */
+.page-header{
+    opacity: 0;
+    /* width: 1903px; */
+    width: 100%;
+    background-color: rgba(255,255,255,.95);
+    box-shadow: 0 13px 42px 11px rgb(0 0 0 / 5%);
+  
+   
+}
+
+.page-header.visual{
+    opacity: 1;
+    z-index: 200;
+
+}
+
+.page-header.sticky{
+    position: fixed;  top: 0; 
+
+}
+
+.page-header .inner{
+    max-width: 100%;
+    width: auto;
+    margin-right: 30px;
+    margin-left: 30px;
+    /* position: relative; */
+    padding-right: 165px;
+    height: 80px;
+    
+}
+
+.page-header .site-logo{
+
+   
+}
+.page-header .site-logo img{
+    padding-top: 10px;
+    padding-left: 5px;
+    float: left;
+}
+.page-header .primary-nav {
+   position: relative;
+
+
+  
+  
+}
+.page-header .primary-nav .main-nav{
+position: absolute;
+top: 0;
+right: 0px;
+
+}
+.page-header .inner .primary-nav .main-nav{
+ height: 80px;
+ padding-top: 16px;
+}
+.page-header .inner .primary-nav .main-nav > li{
+    float: left;
+    height: 43px;
+    position: relative;  
+    /* visibility: hidden; */
+    transition: all .5s 
+
+}
+.page-header .inner .primary-nav .main-nav > li > a{
+    display: inline-block;
+    padding: 0 15px;
+    font-style: normal;
+    font-family: 'NanumBarunGothic';
+    font-weight: 500;
+    /* height: 43px; */
+    line-height: 43px;
+    letter-spacing: 1px;
+    font-size: 20px;
+    color: #262626;
+    text-align: left;
+}
+.page-header .inner .primary-nav .main-nav > li > a:hover{
+     background-color: rgba(255, 255, 255, 0.75);
+     /* background-color: red; */
+     color: #1746cd;
+     font-style: normal;
+     font-family: 'NanumBarunGothic';
+     font-weight: 400;
+}
+.page-header .inner .primary-nav .main-nav > li:hover .sub-nav > li {
+    display: block;
+}
+.sub-nav{
+    width: 225px;
+    background-color: #3d2520;
+    border-color: #c59d5f #3f3f3f #3f3f3f;
+    box-shadow: 0 13px 42px 11px rgb(0 0 0 / 5%);
+    position: absolute;
+    top: 45px;
+    left: 0;
+    /* margin: 0; */
+    z-index:199;
+    /* border-top: 2px solid #c59d5f; */
+}
+.primary-nav .main-nav  > li:hover .sub-4,
+.primary-nav .main-nav  > li:hover .sub-5
+{   position: absolute;
+    top: 45px;
+    left: -119px;
+}
+
+.sub-nav >  li{
+    display: none;
+    text-align: left;
+    padding: 0 15px; 
+}
+.sub-nav li:first-child{
+    border-top: 2px solid #c59d5f;
+}
+.sub-nav > li a{
+    color: rgb(178, 178, 178);
+    height: 43px;
+    font-size: 15px;
+    font-family: 'NanumBarunGothic';
+    line-height: 42px;
+    font-weight: 600;
+    transition: .4s;
+}
+.sub-nav > li a:hover {
+    padding: 5px;
+}
+
+
+.sub-menu{
+
+    position: absolute;
+    top: 45px;
+    left: 0;
+
+}
+.header .nav .main-menu > li:hover .sub-menu-4,
+.header .nav .main-menu > li:hover .sub-menu-5
+{   position: absolute;
+    top: 45px;
+    left: -119px;
+}
+
+.sub-menu li:first-child{
+    border-top: 2px solid #c59d5f;
+}
+
+
+/* 컨텐츠영역 */
+.content{
+    /* background-color: red; */
+    padding: 80px 0 30px 0;
+}
+.content .container{
+    width: 1170px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+.content .container .left-content{
+    width: 41.66666667%;
+    float: left;
+}
+.content .container .left-content{
+    visibility: visible;
+    opacity: 1; 
+}
+.content .container .left-content  a{
+}
+.content .container .left-content img{
+    max-width: 475px;
+    border-radius: 15px;
+        vertical-align: middle;
+
+}
+.content .container .left-content .left_noticebox{
+width: 475px;
+    margin-top: 12px;
+    border-radius: 10px;
+    background: #3d2520;
+    padding: 18px 19px 10px 19px;
+    text-align: left; 
+}
+.content .container .left-content  .left_noticebox h3{
+    color: #fff;
+    margin-bottom: 9px;
+    font-size: 23px;
+    font-family: 'NanumBarunGothic';
+    font-weight: 500;
+    position: relative; 
+}
+.content .container .left-content  .left_noticebox h3 a{
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-family: 'NanumBarunGothic';
+    font-size: 15px;
+    font-weight: 400;
+    color: rgba(255, 255, 255 , 0.5);
+    text-align: left;
+    line-height: 16.5px;
+}
+.content .container .left-content  .left_noticebox h3 a:hover{
+    color: #c59d5f;
+}
+.content .container .left-content  .left_noticebox h3 img{
+    margin-left: 4px;
+}
+.content .container .left-content .left_noticebox p a{
+    width: 100%;
+    display: block;
+    white-space: nowrap;
+    font-size: 15px;
+    font-family: 'NanumBarunGothic';
+    color: #d8d3d2;
+    overflow: hidden;
+    line-height: 28px;  
+}
+/* 오른쪽컨텐트영역 */
+.content .container .right-content{
+    width: 58.33333333%;
+    float: left;
+    padding-left: 24px;
+
+}
+.content .container .right-content .rightbox {
+    position: relative;
+    background: url(../images/brend01.jpg) no-repeat;
+    height: 256px;
+    margin-bottom: 20px;
+    border-radius: 10px; 
+}
+.content .container .right-content .rightbox a{
+    display: block;
+    padding: 21px;
+    width: 100%;
+    height: 100%;
+    /* line-height: 20px; */
+}
+.content .container .right-content .rightbox a h3{
+    text-align: left;
+    /* margin: 0; */
+}
+.content .container .right-content .rightbox a h3 img{
+    border-radius: inherit;
+}
+.content .container .right-content .rightbox a p{
+    position: absolute;
+    right: 29px;
+    bottom: 10px;
+    text-align: right;
+    font-size: 16px;
+    font-family: 'NanumBarunGothic';
+    color: #dddcd6;
+    margin: 0 0 10px;
+    line-height: 28px;
+}
+.content .container .right-content .rightbox a p strong{
+    display: block;
+    font-size: 21px;
+    font-weight: 600;
+    font-family: 'NanumBarunGothic';
+    color: #ebeae9;
+}
+.right-content a{
+    display: block;
+    margin-top: 3px;
+}
+.right-content a img{
+    max-width: 100%;
+    height: auto;
+}
+
+/* 베스트메뉴영역 */
+.content-2{
+    padding: 50px 0;
+}
+.content-2 .container-2{
+    width: 1170px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+.content-2 .container-2 .best-menu{
+    text-align: center;
+    margin-bottom: 60px;
+}
+.content-2 .container-2 .best-menu img{
+    display: block;
+    margin: 0 auto;
+    height: 32px;
+    color: rgb(232, 232, 232);
+}
+.content-2 .container-2 .best-menu span{
+    font-size: 48px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: 'NanumBarunGothic';
+    line-height: 68px;
+    color: #000;
+}
+
+.content-2 .container-2 .all-item-menu{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.content-2 .container-2 .all-item-menu a{
+    display: inline-block;
+    font-size: 16px;
+    font-weight: normal;
+    color: rgb(51,51,51);
+    padding-right: 12px;
+    text-transform: uppercase; 
+}
+.content-2 .container-2 .all-item-menu a .fa{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1;
+    font-family: 'NanumBarunGothic','fontawesome' ;
+    display: inline-block;
+    font-weight: normal;
+    font-size: inherit;
+    text-rendering: auto;
+}
+.fa-star::before{
+    content: "\f006" !important;
+    padding-right: 8px;
+    color: #ff7622;
+}
+
+
+
+
+/* 슬라이더 영역 */
+.items-sw{}
+.items-sw .inner{
+    /* overflow: hidden; */
+    width: 1170px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.items-sw .inner .sw-basic{
+    /* 여기에 무조건 너비를 줘야된다 래퍼는 건드릴필요없다 */
+    width: 1160px;
+    height: 330px;
+
+}
+
+.sw-basic .swiper-slide{
+
+}
+
+.items-sw .inner .swiper-slide .photo{
+    width: 25%;
+    height: 290px;
+    background-color: #fff;
+    border-radius: 10px;
+    float: left;
+    position: relative;
+    /* object-fit: cover;    */
+    /* 이거는 사진 왜곡시키지 않게  */
+}
+
+
+.items-sw .inner .swiper-slide .photo img{
+    display: block;
+    width: 260px;
+    height: 260px;
+    position: relative;
+
+}
+
+.items-sw .inner .swiper-slide .photo:hover .item-container{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    padding-top: 50px;
+}
+
+
+.items-sw .inner .swiper-slide .item-title{
+    /* position: relative; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 260px;
+    height: 260px;
+    
+}
+.items-sw .inner .swiper-slide  .item-title .item-container{
+    width: 100%;
+    height: 38%;
+    /* padding-bottom: 100px; */
+    background-color:rgba(0,0,0, .6);
+    border-radius: 0 0px 10px 10px;
+    z-index: 2;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transition:  .7s ease-in-out;
+}
+
+
+.items-sw .inner .swiper-slide .item-title .item-container h3{
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+   font-weight: 500;
+   font-family: 'NanumBarunGothic';
+   height: 22px;
+   line-height: 20px;
+   margin-top: 40px;
+  
+
+}
+
+.items-sw .inner .swiper-slide  .item-title .item-container:hover{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    padding-top: 50px;
+
+}
+
+
+
+.items-sw .inner .swiper-slide  .item-title .item-container span{
+    display: block;
+    height: 40px;
+    width: 50px;
+    margin: 21px auto 13px;
+    
+}
+.items-sw .inner .swiper-slide  .item-title .item-container span .mini-logo{
+    display: block;
+    max-width: 100%;
+    height: 100%;
+    
+    
+}
+
+
+.items-sw .inner .swiper-slide .bottom-meun-box{
+    background-color: #c59d5f;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 400;
+    font-family: 'NanumBarunGothic';
+    height: 40px;
+    line-height: 2;
+    padding: 8px 25px;
+    display: inline-block;
+    position: absolute;
+    bottom: -20px;
+    left: 31%;
+    z-index: 5;
+    text-align: center;
+    
+}
+
+.items-sw .inner .swiper-slide-2 .bottom-meun-box{
+    position: absolute;
+    bottom: -20px;
+    left: 21%;
+    
+}
+
+.items-sw .inner .swiper-slide-3 .bottom-meun-box{
+    position: absolute;
+    bottom: -20px;
+    left: 27%;
+    
+}
+
+
+
+.items-sw .inner .swiper-slide .bottom-meun-box:hover .item-container{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    padding-top: 50px;
+}
+
+.items-sw .inner .swiper-slide .item-title .item-container .btn{
+    /* z-index: 10; */
+    text-align: center;
+}
+.items-sw .inner .swiper-slide  .item-title .item-container .btn a{
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 400;
+    border: 2px solid #c59d5f;
+    padding: 6px 25px;
+    background-color: transparent;
+    border-radius: 1.6px;
+    color: #c59d5f;
+   height: 40px;
+    border-radius: 10px;
+    cursor: auto;
+
+}
+
+.items-sw .inner .swiper-slide .item-title .item-container .btn a:hover{
+    background-color: #c59d5f;
+    font-weight: 500;
+    color: #fff;
+    transition: .5s;
+
+}
+
+
+.sw-basic .swiper-pagination .swiper-pagination-bullet{
+    width: 12px;
+    height: 12px;
+    background-color: #262626;
+    margin: 5px 7px;
+    
+
+}
+
+
+/* 미니배너영역 */
+.mini-banner{
+width: 100%;
+position: relative;
+padding: 50px 0 0 0 ;
+}
+
+.mini-banner  .banner-img{
+    background-image: url(../images/bg_waffle_repeat.jpg);
+    background-position: 50% -76.0485px;
+    height: 220px;
+    width: 100%;
+}
+
+.mini-banner .title-container{
+    width: 1170px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 50px 0;
+    position: absolute;
+    top: 30px;
+    left: 19.5%;
+    
+}
+.mini-banner .title-container span{
+    color: #fff;
+    font-size: 48px;
+    margin-top: 20px;
+    margin-bottom: 6px;
+    font-family: 'NanumBarunGothic';
+    font-weight: normal;
+    display: inline-block;
+    letter-spacing: -3px;
+    line-height: 69px;
+
+}
+
+.mini-banner .title-container span img{
+    display: inline-block;
+    vertical-align: top;
+    max-width: 100%;
+    height: 55px;
+}
+.mini-banner  .title-container p{
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 0;
+    font-family: 'NanumBarunGothic';
+    line-height: 26px;
+    
+}
+ /* 뉴스토어 영역 */
+
+.new-store .container-3 .inner{
+    margin-bottom: 60px;
+    padding-top: 80px;
+    text-align: center;
+
+}
+.new-store .container-3 .inner .icon{
+    display: block;
+    margin: 0 auto;
+    /* max-width: 100%; */
+    /* text-align: center; */
+
+}
+.new-store .container-3 .inner h3{
+    font-size: 48px;
+    margin-top: 10px;
+    font-family: 'NanumBarunGothic';
+    font-weight: normal;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.new-store .container-3 .inner p{
+    font-size: 18px;
+    font-family: 'NanumBarunGothic';
+    color: #262626;
+    font-weight: 500;
+    /* display: inline-block; */
+    position: relative;
+}
+
+.new-store .container-3 .inner p::before{
+    content: "";
+    color: #fff;
+    height: 15px;
+    width: 50px;
+    border-bottom: 2px solid #ddd;
+    position: absolute;
+    top: -5px;
+    left: 44%
+
+}
+
+.new-store .container-3 .inner p::after{
+    content: "";
+    color: #fff;
+    height: 15px;
+    width: 50px;
+    border-bottom: 2px solid #ddd;
+    position: absolute;
+    top: -5px;
+    right: 44%
+
+}
+/* 스토어 이미지 영역 */
+
+.store-sw{
+    /* padding-bottom: 100px; */
+}
+.store-sw .inner{
+    width: 1170px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+.store-sw .inner .sw-store{
+    width: 100%;
+    height: 360px;
+}
+.store-sw .inner .sw-store .swiper-slide{}
+
+.store-sw .inner .sw-store .swiper-slide .store-bg{
+    width: 376px;
+    height: 330px;
+    float: left;
+    
+}
+
+.store-sw .inner .sw-store .swiper-slide  .store-bg .Store-inner{
+    width: 357px;
+    height: 300px;
+    margin: 0 auto;
+    position: relative;
+    
+}
+.store-sw .inner .sw-store .swiper-slide .store-bg .Store-inner a{
+   
+}
+.store-sw .inner .sw-store .swiper-slide .store-bg .Store-inner a .st-photo{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    
+}
+.store-sw .inner .sw-store .swiper-slide .store-bg .Store-inner .Store-title {
+    background-color: #262626;
+    width: 100%;
+    height: 31%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: absolute;
+    bottom: 0;
+    
+    
+}
+
+.store-sw .inner .sw-store .swiper-slide .store-bg .Store-inner .Store-title h3{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: 'NanumBarunGothic';
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+    
+}
+
+
+.store-sw .inner .sw-store .swiper-slide .store-bg .Store-inner .Store-title p{
+    text-align: center;
+    color: #8e8e8e;
+    font-family: 'NanumBarunGothic';
+    font-weight: 400;
+    margin: 0 0 10px;
+
+}
+
+.store-sw .inner .sw-store .swiper-slide .store-bg .Store-inner .Store-title h3 a{
+    color: #fff;
+}
+
+
+.sw-store .swiper-pagination .swiper-pagination-bullet{
+    width: 12px;
+    height: 12px;
+    background-color: #262626;
+    margin: 5px 7px;
+    
+
+}
+
+/* 창업배너영역 */
+.last-banner{
+    width: 100%;
+    padding: 100px 0 10px 0px;
+}
+.last-banner .container-4{
+    width: 1170px;
+    padding: 0 20px;
+    margin: 0 auto;
+    position: relative;
+}
+.last-banner .container-4 a .chang{
+    width: 580px;
+    height: 400px;
+    
+    
+}
+.last-banner .container-4  a .chang .chang-bg {
+    background-image: url(../images/changbg.jpg);
+    background-repeat: no-repeat;
+    height: 360px;
+    background-position: 50%;
+    width: 560px;
+    border-radius: 10px;
+    position: relative;
+   
+}
+
+.last-banner .container-4 a .chang-bg .chang-title{
+    position: absolute;
+    top:37%;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+}
+.last-banner .container-4 a .chang-bg .chang-title h2{
+    font-family: 'NanumBarunGothic';
+    color: #fff;
+    padding: 0 0 15px;
+    font-weight: 500;
+    font-size: 30px;
+}
+.last-banner .container-4 a .chang-bg .chang-title span{
+    font-family: 'NanumBarunGothic';
+    color: #fff;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+
+.last-banner .container-4 .cam{
+    width: 580px;
+    height: 400px;
+    position: absolute;
+    top: 0;
+    right: 0px;
+
+}
+.last-banner .container-4 .cam-bg{
+    background-image: url(../images/campbg.jpg);
+    background-repeat: no-repeat;
+    height: 360px;
+    background-position: 50%;
+    width: 560px;
+    border-radius: 10px;
+    position: relative;
+    
+
+}
+.last-banner .container-4 .cam-bg .cam-title{
+    text-align: center;
+    position: absolute;
+    top:31%;
+    left: 50%;
+    transform: translate(-50%);
+    
+}
+.last-banner .container-4 .cam-bg .cam-title h2{
+    font-family: 'NanumBarunGothic';
+    color: #fff;
+    padding: 0 0 15px;
+    font-weight: 500;
+    font-size: 30px;
+}
+.last-banner .container-4 .cam-bg .cam-title span{
+    font-family: 'NanumBarunGothic';
+    color: #fff;
+    font-size: 14px;
+    line-height: 20px;
+}
+.last-banner .container-4 .cam-bg .cam-title .camp_search{
+    margin-top: 19px;
+}
+.last-banner .container-4 .cam-bg .cam-title .camp_search input{
+    display: inline-block;
+    border: none;
+    height: 38px;
+    text-indent: 10px;
+    width: 175px;
+    color:#7f7f7f !important;
+    font-size: 13px;
+    font-weight: 400;
+    background-color: #fff;
+    /* text-align: start; */
+    /* cursor: text; */
+    font-family: 'NanumBarunGothic';
+    
+    
+
+}
+.last-banner .container-4 .cam-bg .cam-title .camp_search .camp_btn{
+    display: inline-block;
+    width: 38px;
+    height: 38px;
+    line-height: 38px;
+    background: url(../images/search.png) #e59912 center center no-repeat; 
+    border: none;
+    vertical-align: bottom;
+    cursor: pointer;
+    text-transform: none;
+ 
+}
+
+
+
+/* 푸터영역 */
+
+#footer{
+    width: 100%;
+    background-image: url(../images/foot_bg01.jpg);
+}
+#footer .footer-logo{
+    padding: 40px 0;
+    text-align: center;
+    
+}
+#footer .footer-logo img{
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+#footer .footer-logo .sns-icon{
+    width: 100%;
+    /* margin: 0 auto; */
+    text-align: center;
+    
+}
+#footer .footer-logo ul li{
+    /* float: left; */
+    text-align: center;
+    display: inline-block;
+    
+    
+    
+}
+#footer .footer-logo ul li a{
+    display: block;
+    margin: 0 5px;
+    
+   
+}
+#footer .footer-logo ul li a img{
+    display: block;
+   
+}
+
+#footer .footer-logo .top{
+    margin-bottom: 20px;
+    font-family: 'NanumBarunGothic';
+    font-size: 13px;
+    font-style: normal;
+    line-height: 22px;
+    word-break: break-all;
+    color: #584506;
+}
+#footer .footer-logo .top .foot-bar{
+    background: url(../images/foot_bar.jpg) 0px 2px no-repeat;
+    margin-left: 10px;
+    padding-left: 10px;
+}
+#footer .footer-logo p{
+    color: #584506;
+    font-size: 13px;
+    font-family: 'NanumBarunGothic';
+    font-weight: 400;
+}
+#footer .footer-logo p a{
+    color: #131313;
+    font-weight: 600;
+
+}
+
+
+#footer .footer-logo .go_top{
+    display: none; 
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    right: 30px;
+    bottom: 50px;
+    border-radius: 10px;
+    font-size: 13px;
+    line-height: 36px;
+    text-align: center;
+    color: #fff;
+    background: rgba(32,32,32,.95);
+    transition: all .5s;
+   
+}
+
+#footer .footer-logo .go_top:hover{
+    background-color: #c59d5f;
+}
+
